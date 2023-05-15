@@ -5,7 +5,7 @@
  * @info: Used to maintain const function prototype in shell prog.
  *  Return: Always 0
  */
-int _myhelp(info_x *info)
+int _myhelp(info_t *info)
 {
 	char **arg_arr;
 
@@ -21,7 +21,7 @@ int _myhelp(info_x *info)
  * @info: Used to maintain const function prototype in the shell prog.
  *  Return: Always 0
  */
-int _mycd(info_x *info)
+int _mycd(info_t *info)
 {
 	char *c, *dir, buffer[1024];
 	int changdir_ret;
@@ -70,7 +70,7 @@ int _mycd(info_x *info)
  * @info: Used to maintain const function prototype.
  *  Return: exits with a given exit status
  */
-int _myexit(info_x *info)
+int _myexit(info_t *info)
 {
 	int quitcheck;
 

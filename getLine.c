@@ -106,12 +106,24 @@ ssize_t get_input(info_t *info)
 	*buf_p = buff;
 	return (r);
 
+ /**
+  * sigintHandler - blocks ctrl-C
+  * @sig_num: the signal number
+  *
+  * Return: void if true
+  */
+ void sigintHandler(__attribute__((unused))int sig_num)
+ {
+         _puts("\n");
+         _puts("$ ");
+         _putchar(BUF_FLUSH);
+ }
+
 /**
  * _getline - gets the next line of input from STDIN in the program
  * @info: parameter structure in the program
  * @ptr: address of pointer to buffer, preallocated or NULL in the program
  * @length: size of initially allocated ptr buffer if not NULL
- *
  * Return: s if true
  */
 int _getline(info_t *info, char **ptr, size_t *length)
@@ -146,18 +158,5 @@ int _getline(info_t *info, char **ptr, size_t *length)
 		*length = t;
 	*ptr = p;
 	return (t);
-}
-
-/**
- * sigintHandler - blocks ctrl-C
- * @sig_num: the signal number
- *
- * Return: void if true
- */
-void sigintHandler(__attribute__((unused))int sig_num)
-{
-	_puts("\n");
-	_puts("$ ");
-	_putchar(BUF_FLUSH);
 }
 

@@ -22,12 +22,12 @@ ssize_t get_nde_ind(list_t *hd, list_t *nde)
 }
 
 /**
- * list_lns - determines length of linked list in the program
+ * list_lens - determines length of linked list in the program
  * @h: pointer to first node in the program
  *
  * Return: size of list in the program
  */
-size_t list_lns(const list_t *h)
+size_t list_lens(const list_t *h)
 {
 	size_t j = 0;
 
@@ -48,7 +48,7 @@ size_t list_lns(const list_t *h)
 char **lst_to_strs(list_t *hd)
 {
 	list_t *nde = hd;
-	size_t j = list_lns(hd), k;
+	size_t j = list_lens(hd), k;
 	char **stris;
 	char *stri;
 
@@ -77,12 +77,12 @@ char **lst_to_strs(list_t *hd)
 
 
 /**
- * prnt_the_list - prints all elements of a list_t linked list in the program
+ * print_list - prints all elements of a list_t linked list in the program
  * @f: pointer to first node in the program
  *
  * Return: size of list
  */
-size_t prnt_the_list(const list_t *f)
+size_t print_list(const list_t *f)
 {
 	size_t j = 0;
 

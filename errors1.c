@@ -12,7 +12,7 @@ void remove_comments(char *buff)
 	int s;
 
 	for (s = 0; buff[s] != '\0'; s++)
-		if (buff[i] == '#' && (!s || buff[s - 1] == ' '))
+		if (buff[s] == '#' && (!s || buff[s - 1] == ' '))
 		{
 			buff[s] = '\0';
 			break;
@@ -43,7 +43,7 @@ int _erratoi(char *s)
 		else
 			return (-1);
 	}
-	return (result);
+	return (res);
 }
 
 /**

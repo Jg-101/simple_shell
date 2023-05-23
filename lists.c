@@ -42,7 +42,7 @@ list_t *add_node(list_t **head, const char *str, int num)
 	if (!new_hd)
 		return (NULL);
 	_memset((void *)new_hd, 0, sizeof(list_t));
-	new_head->num = num;
+	new_hd->num = num;
 	if (str)
 	{
 		new_hd->str = _strdup(str);

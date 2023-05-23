@@ -59,7 +59,7 @@ char **lst_to_strs(list_t *hd)
 		return (NULL);
 	for (j = 0; nde; nde = nde->next, j++)
 	{
-		stri = malloc(_strlen(nde->stri) + 1);
+		stri = malloc(_strlen(nde->str) + 1);
 		if (!stri)
 		{
 			for (k = 0; k < j; k++)
@@ -100,14 +100,14 @@ size_t prnt_the_list(const list_t *f)
 }
 
 /**
- * nde_strts_with - returns node whose st starts with a prefix
+ * node_starts_with - returns node whose st starts with a prefix
  * @node: pointer to list head in the program
  * @pref: str to match in the program
  * @a: the next char after prefix to match
  *
  * Return: match node or null
  */
-list_t *nde_strts_with(list_t *node, char *pref, char a)
+list_t *node_starts_with(list_t *node, char *pref, char a)
 {
 	char *s = NULL;
 

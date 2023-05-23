@@ -43,7 +43,7 @@ char *get_history_file(info_t *info)
 	dr = _getenv(info, "HOME=");
 	if (!dr)
 		return (NULL);
-	buf = malloc(sizeof(char) * (_strlen(dr) + _strlen(HIST_FILE) + 2));
+	buff = malloc(sizeof(char) * (_strlen(dr) + _strlen(HIST_FILE) + 2));
 	if (!buff)
 		return (NULL);
 	buff[0] = 0;
